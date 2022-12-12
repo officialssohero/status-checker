@@ -4,9 +4,7 @@ import asyncio
 import datetime
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from dotenv import load_dotenv
 
-load_dotenv()
 
 app = Client(
     api_id = int(os.environ["API_ID"]),
