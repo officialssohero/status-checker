@@ -6,11 +6,8 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
 
-app = Client(
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    name = os.environ["SESSION_NAME"]
-)
+app = Client("my_account", session_string=os.environ["SESSION_NAME"])
+
 TIME_ZONE = os.environ["TIME_ZONE"]
 BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
